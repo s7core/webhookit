@@ -51,7 +51,7 @@ class WebhookitHandler(tornado.web.RequestHandler):
 
             #repo_name = parser.get_repo_name(data) or ''
             #repo_branch = parser.get_repo_branch(data) or ''
-            webhook_key = '%s/%s' % ('repo_name', 'repo_branch')
+            webhook_key = '%s/%s' % ('repo_name', 'branch_name')
             # 需要出发操作的服务器 server 数组
             servers = config.get(webhook_key, [])
             if servers and len(servers) > 0:
