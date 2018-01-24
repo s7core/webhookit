@@ -45,12 +45,12 @@ class WebhookitHandler(tornado.web.RequestHandler):
             # gitlab and github(application/json)
             data = self.request.body or None
         try:
-           // data = json.loads(data)  # webhook data
+           # data = json.loads(data)  # webhook data
             # webhook configs
             config = WEBHOOKIT_CONFIGURE or {}
 
-            //repo_name = parser.get_repo_name(data) or ''
-            //repo_branch = parser.get_repo_branch(data) or ''
+            #repo_name = parser.get_repo_name(data) or ''
+            #repo_branch = parser.get_repo_branch(data) or ''
             webhook_key = '%s/%s' % ('repo_name', 'repo_branch')
             # 需要出发操作的服务器 server 数组
             servers = config.get(webhook_key, [])
